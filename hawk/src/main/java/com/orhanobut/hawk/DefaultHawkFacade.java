@@ -106,9 +106,9 @@ public class DefaultHawkFacade implements HawkFacade {
 
     // 4. Convert the text to original data along with original type
     T result = null;
+    log("Hawk.get -> DataInfo : " + dataInfo);
     try {
       result = converter.fromString(plainText, dataInfo);
-       log("Hawk.get -> DataInfo : " + dataInfo);
       log("Hawk.get -> Converted to : " + result);
     } catch (Exception e) {
       log("Hawk.get -> Converter failed");
